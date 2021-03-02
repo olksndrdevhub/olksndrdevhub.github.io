@@ -1,3 +1,1 @@
-# olksndrdevhub.github.io
-
-url: https://oleksandrromaniuk.tk
+# https://oleksandrromaniuk.tk
