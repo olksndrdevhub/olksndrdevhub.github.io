@@ -1,18 +1,18 @@
 :root{
-    --mainColor:#eaeaea;
-    --secondaryColor:#fff;
+    --mainColor:#574f4a;
+    --secondaryColor:#f6f6f6;
 
     --borderColor:#c1c1c1;
 
-    --mainText:black;
+    --mainText:white;
     --secondaryText:#4b5156;
 
     --themeDotBorder:#24292e;
 
-    --previewBg:rgb(251, 249, 243, 0.8);
-    --previewShadow:#f0ead6;
+    --previewBg:#94ebeb52;
+    --previewShadow:#48b9c7;
     
-    --buttonColor:black;
+    --buttonColor:#48b9c7;
 
 }
 
@@ -34,14 +34,23 @@ h1, h2, h3, h4, h5, h6, strong{
     font-weight: 500;
 }
 
-p, li, span, label, textarea{
+.sec-text{
     color: var(--secondaryText);
+}
+
+p, li, span, textarea{
+    color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
+}
+
+label{
+    color: white;
     font-family: 'Roboto Mono', monospace;
 }
 
 a{
     text-decoration: none;
-    color: #17a2b8;
+    color: #48b9c7;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -128,10 +137,10 @@ h6 {font-size: 16px;}
     margin-left: 5px;
 }
 
-.browser-dot{
+.browser-close{
     background-color: black;
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     margin: 5px;
 
@@ -145,16 +154,31 @@ h6 {font-size: 16px;}
 }
 
 #dot-1{
-    background-color: #FC6058;
+    margin: 12px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid white;
 }
 
 #dot-2{
-    background-color: #fcf158;
+    margin: 12px;
+    width: 5px;
+    height: 5px;
+    border: 2px solid white;
 }
 
 #dot-3{
-    background-color: #5bfc58;
+    background-color: #f28c2a;
 }
+#dot-3:after{
+    display: inline-block;
+    content: "\00d7"; /* This will render the 'X' */
+    color: white;
+    font-weight: 1000;
+    font-size: 20px;
+    margin-left: 4px;
+    padding: 0;
+  }
 
 .left-column{
     grid-area: left-column;
@@ -200,17 +224,27 @@ h6 {font-size: 16px;}
 
 }
 
-#light-mode{
+#pop-os-dark-mode{
+    background-color: #363636;
+    border-color: var(--buttonColor);
+}
+
+#pop-os-light-mode{
     background-color: #fff;
+    border-color: var(--buttonColor);
 }
 #blue-mode{
     background-color: #192734;
+    border-color: var(--buttonColor);
 }
 #green-mode{
     background-color: #78866b;
+    border-color: var(--buttonColor);
 }
 #purple-mode{
     background-color: #7E4C74;
+    border-color: var(--buttonColor);
+
 }
 
 #settings-note{
@@ -318,7 +352,7 @@ h6 {font-size: 16px;}
 }
 
 .post-intro{
-    color: #4b5156;
+    color: #484b4e;
     font-size: 14px;
 }
 
@@ -370,8 +404,11 @@ h6 {font-size: 16px;}
     padding-top: 10px;
     padding-bottom: 10px;
     color: #fff;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
     background-color: var(--buttonColor);
-    border: none;
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
 }
 
 

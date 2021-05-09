@@ -3,7 +3,7 @@ console.log('it`s working!')
 let theme = localStorage.getItem('theme')
 
 if(theme == null){
-    setTheme('light')
+    setTheme('pop-os-dark')
 }else{
     setTheme(theme)
 }
@@ -20,7 +20,11 @@ for(var i=0; themeDots.length > i; i++){
 
 
 function setTheme(mode) {
-    if(mode == 'light'){
+    if(mode == 'pop-os-dark'){
+        document.getElementById('theme-style').href = 'pop-os-dark.css'
+    }
+
+    if(mode == 'pop-os-light'){
         document.getElementById('theme-style').href = 'style.css'
     }
 

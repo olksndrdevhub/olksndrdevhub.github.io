@@ -33,27 +33,30 @@
 
             <div class="intro-wrapper">
                 <div class="nav-wrapper">
-                    <div class="dots-wrapper">
-                        <div id="dot-1" class="browser-dot"></div>
-                        <div id="dot-2" class="browser-dot"></div>
-                        <div id="dot-3" class="browser-dot"></div>
-                    </div>
+                    
                     <ul id="navigation">
                         <li><a href="#social-links">Contacts</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#mail_me">Mail me</a></li>
                     </ul>
+                    <div class="dots-wrapper">
+                        <div id="dot-1" class="browser-minimize"></div>
+                        <div id="dot-2" class="browser-full-screen"></div>
+                        <div id="dot-3" class="browser-close"></div>
+                    </div>
                 </div>
 
                 <div class="left-column">
                     <img id="profile-pic" src="pictures/profile_pic.jpg" alt="" srcset="">
-                    <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
+                    <h5 style="text-align: center; line-height: 0;" class="sec-text">Personalize Theme</h5>
 
                     <div id="theme-options-wrapper">
-                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
-                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
-                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+                        <div data-mode="pop-os-dark" id="pop-os-dark-mode" class="theme-dot" title="Pop!_OS Dark"></div>
+                        <div data-mode="pop-os-light" id="pop-os-light-mode" class="theme-dot" title="Pop!_OS Light"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot" title="Blue"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot" title="Green"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot" title="Purple"></div>
+                        
                     </div>
 
                     <p id="settings-note">*Theme settings will be saved for <br>your next visit</p>
@@ -81,10 +84,10 @@
 
             <div class="about-wrapper">
                 <div class="about-me">
-                    <h4>More about me</h4>
+                    <h4 class="sec-text">More about me</h4>
 
                     <p>
-                        My name is Alexander Romaniuk, I am a Python developer. 
+                        My name is Oleksandr Romaniuk, I am a Python developer. 
                         I like to write code and implement logic through letters, symbols and numbers.
                     </p>
 
@@ -95,7 +98,7 @@
 
                     <hr>
 
-                    <h4>TOP SKILLS</h4>
+                    <h4 class="sec-text">TOP SKILLS</h4>
 
                     <p>You can view my resume at this link:   
                         <a href="/Oleksandr Romaniuk, Resume, Python Developer.pdf" target="_blank">View resume</a></p>
@@ -117,7 +120,7 @@
                         </ul>
                     </div>
 
-                    <h4>CERTIFICATES</h4>
+                    <h4 class="sec-text">CERTIFICATES</h4>
 
                     <p>Check my completed courses:
                         <li><a href="Intro to Django for Web Development.pdf" target="_blank">Udemy | Intro to Django for Web Development</a></li>
@@ -126,7 +129,7 @@
                 </div>
 
                 <div id="social-links" class="social-links">
-                    <h3>Contact with me</h3>
+                    <h3 class="sec-text">Contact with me</h3>
 
                     <a href="mailto:oleksandr.romaniuk.work@gmail.com">email: oleksandr.romaniuk.work@gmail.com</a>
                     <br>
@@ -138,7 +141,7 @@
                     <br>
 
                     <!-- <img id="social_img" src="pictures/follow.jpg" alt="" srcset=""> -->
-                    <h3>Check & Follow</h3>
+                    <h3 class="sec-text">Check & Follow</h3>
                     <!-- <a href="https://twitter.com/tse_ne_ia" target="_blank" rel="noopener noreferrer">Twitter: @tse_ne_ia</a> -->
                     <br>
                     <a href="https://www.instagram.com/olksndr.rmnk/" target="blank">Instagram: @olksndr.rmnk <i class="fab fa-instagram"></i></a>                    
@@ -225,7 +228,7 @@
 
     <section id="mail_me" class="s2">
         <div class="main-container">
-            <h3 style="text-align:center">Get In Touch</h3>
+            <h3 style="text-align:center" class="sec-text">Get In Touch</h3>
 
             <form id="contact-form" action="https://formspree.io/xpzyvrnr" method="POST">
                 <label for="">Name</label>
