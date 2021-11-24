@@ -19,7 +19,7 @@ html{
 }
 
 body *{
-    transition: 0.3s;
+    transition: 0.1s;
     background-color: var(--mainColor);
 }
 
