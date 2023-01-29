@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6, strong{
     color: var(--mainText);
     font-family: 'Passion One', cursive;
     font-weight: 500;
+    margin: 0;
 }
 
 .sec-text{
@@ -68,8 +69,6 @@ h6 {font-size: 16px;}
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "photo contacts form";
-    height: 100vh;
-    /* padding-top: 5%; */
 }
 
 .picture-container{
@@ -82,10 +81,45 @@ h6 {font-size: 16px;}
     grid-area: form;
 }
 
+.my-projects-wrapper {
+    padding: 0 2% 5%;
+}
+
+.my-projects-wrapper h3 {
+    text-align: center;
+}
+
+.my-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+.my-projects img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+.my-projects img:hover {
+    border: 2px solid var(--buttonColor);
+}
+
+/* .my-projects .title:hover{
+    font-size: 2rem;
+} */
+.my-projects .title{
+    color: var(--buttonColor);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+
+
 
 
 .block{
-    padding: 10%;
+    padding: 5% 10% 10% 10%;
     /* height: 100%; */
 }
 
