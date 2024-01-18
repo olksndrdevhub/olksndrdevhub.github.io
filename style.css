@@ -114,7 +114,9 @@ h6 {font-size: 16px;}
     font-weight: 800;
 }
 
-
+.color-gold{
+    color: var(--buttonColor);
+}
 
 
 
