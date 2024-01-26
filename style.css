@@ -105,8 +105,7 @@ h6 {font-size: 16px;}
     transition: transform 0.3s ease;
 }
 .my-projects a:hover {
-    border: 1px solid var(--buttonColor);
-    border-radius: 12px;
+    backgroud-color: #010409;
     box-sizing: border-box;
 }
 
