@@ -104,6 +104,9 @@ h6 {font-size: 16px;}
     object-fit: cover;
     transition: transform 0.3s ease;
 }
+.my-projects a {
+    border-radius: 15px;
+}
 .my-projects a:hover {
     backgroud-color: #010409;
     box-sizing: border-box;
