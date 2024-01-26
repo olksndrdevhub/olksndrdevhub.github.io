@@ -91,18 +91,23 @@ h6 {font-size: 16px;}
 
 .my-projects {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 5%;
     margin-top: 2%;
     margin-bottom: 10%;
     text-align: center;
 }
 .my-projects img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 15px;
+    height: 15rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 .my-projects img:hover {
+    transform: scaleY(1.1);
     border: 2px solid var(--buttonColor);
+    box-sizing: border-box;
 }
 
 /* .my-projects .title:hover{
@@ -218,6 +223,9 @@ h6 {font-size: 16px;}
     .block{
         padding: 5%;
     }
+    .my-projects {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media screen and (max-width: 1000px){
@@ -229,6 +237,12 @@ h6 {font-size: 16px;}
     .form-container>h3{
         text-align: center;
         margin: 0 0 5% 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .my-projects {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -251,7 +265,12 @@ h6 {font-size: 16px;}
         margin: 0 0 5% 0;
     }
 }
+@media screen and (max-width: 600px){
 
+    .my-projects {
+        grid-template-columns: 1fr;
+    }
+}
 @media screen and (max-width: 500px){
 
     .name{
@@ -260,5 +279,8 @@ h6 {font-size: 16px;}
     }
     .form-container>h3{
         text-align: left;
+    }
+    .my-projects {
+        grid-template-columns: 1fr;
     }
 }
