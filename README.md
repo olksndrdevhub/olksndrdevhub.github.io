@@ -1,1 +1,1 @@
-# https://oleksandrdev.com
+# oleksandrdev.com
