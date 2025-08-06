@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178463432-1"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script src="alpine.js" defer></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -23,116 +25,77 @@
 
       gtag('config', 'UA-178463432-1');
     </script>
-    <style>
-        .resume-link:hover{
-            color: #ffa600!important;
-        }
-    </style>
 </head>
 <body>
-    <div class="parent-container">
-
-        <div class="picture-container block">
-            <div class="pic">
-                <img id="profile-pic" src="/pictures/photo2.JPG" alt="Oleksandr Romaniuk Photo">
-            </div>
-            <div class="name">
-                <span class="first-line">Oleksandr Romaniuk</span><br>
-                <span class="second-line">Python Web Developer</span>
-            </div>
+    <div id="hero" x-data="{ menuTop: false }" x-init="console.log('alpine initialized')" x-intersect:enter="menuTop = false" x-intersect:leave="menuTop = true">
+      <div class="top-hero-container">
+        <div class="role-section">
+          <h1>software developer</h1>
+          <h3>python, golang, web, full-stack</h3>
         </div>
-
-        <div class="contacts-container block">
-            <div id="social-links" class="social-links">
-                <h3 class="sec-text">Contact with me</h3>
-
-                <a href="mailto:oleksandr.romaniuk.work@gmail.com">email: oleksandr.romaniuk.work@gmail.com</a>
-                <br><br>
-                <a href="https://t.me/olksndr_rmnk" target="blank">Telegram: @olksndr_rmnk
-                <br>
-                <h3 class="sec-text">My work and code</h3>
-                <a href="https://www.upwork.com/o/profiles/users/~011789a0fdf2f50788/" target="_blank" rel="noopener noreferrer">Upwork: Oleksandr R.</a>
-                <br><br>
-                <a href="https://github.com/olksndrdevhub" target="_blank" rel="noopener noreferrer">Github: @olksndrdevhub</a>
-                <br>
-                <h3 class="sec-text">Follow & add me at social networks</h3>
-                <a href="https://www.linkedin.com/in/oleksandr-romaniuk-613005143/" target="_blank" rel="noopener noreferrer">LinkedIn: Oleksandr Romaniuk</a>
-                <br><br>
-                <a href="https://www.instagram.com/olksndr.rmnk/" target="blank">Instagram: @olksndr.rmnk                
-                <br>
-                <a class="resume-link" href="/Oleksandr-Romaniuk-Resume.pdf" target="_blank" rel="noopener noreferrer">
-                    <h3 class="sec-text resume-link">My resume: <i class="far fa-file-pdf"></i></h3>
-                </a>
-            </div>
+        <div class="img-container">
+          <img id="profile-pic" src="pictures/photo2.JPG" alt="Oleksandr Romaniuk Photo">
+          <a href="https://github.com/olksndrdevhub" target="_blank" rel="noopener noreferrer">@olksndrdevhub</a>
         </div>
-
-        <div class="form-container block">
-            <h3 class="sec-text">Get In Touch</h3>
-
-            <form id="contact-form" action="https://formspree.io/xpzyvrnr" method="POST">
-                <label for="">Name</label>
-                <input type="text" name="name" class="input-field">
-
-                <label for="">Subject</label>
-                <input type="text" name="subject" class="input-field">
-
-                <label for="">Email</label>
-                <input type="text" name="email" class="input-field">
-
-                <label for="">Message</label>
-                <textarea style="resize: none" name="message" class="input-field"></textarea>
-                <input id='submit-btn' type="submit" value='Send'>
-            </form>
+      </div>
+      <div class="bottom-hero-container">
+        <nav id="menu" x-bind:class="{ 'menu-top': menuTop }">
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contacts">Contacts</a>
+          <a class="nav-link resume" href="/Oleksandr-Romaniuk-Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+          </a>
+          <a class="nav-link mail" href="mailto:oleksandr.romaniuk.work@gmail.com">
+            <span>Get in touch right now</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+          </a>
+        </nav>
+        <div class="name-section">
+          <h1>Oleksandr Romaniuk</h1>
+          <h3>3+ years</h3>
         </div>
-
+      </div>
     </div>
-    <div class="my-projects-wrapper">
-        <h3>Projects where I take a part</h3>
-        <div class="my-projects">
-            <a href="https://wagandcompany.co.uk/" target="_blank">
-                <div class="">
-                    <img src="/pictures/wag_wrms.png" alt="">
-                    <div class="title">
-                        wagandcompany.co.uk
-                    </div>
-                    <div class="description second-line">CRM system for the visiting dog charity</div>
-                    <div class="role" style="color: white;"><span class="color-gold">Role:</span> full-stack developer</div>
-                    <div class="responsibilities" style="color: white;"><span class="color-gold">Responsibilities:</span> Add new features to the prod app, fix bugs and improve performance</div>
-                </div>
-            </a>
-            <a href="https://bigagroparts.com/" target="_blank">
-                <div class="">
-                    <img src="/pictures/bigagroparts.png" alt="">
-                    <div class="title">
-                        bigagroparts.com
-                    </div>
-                    <div class="description second-line">E-Commerce of spare parts for agricultural machinery</div>
-                    <div class="role" style="color: white;"><span class="color-gold">Role:</span> Single full-stack developer</div>
-                    <div class="responsibilities" style="color: white;"><span class="color-gold">Responsibilities:</span>  Build the app from the ground</div>
-                </div>
-            </a>
-            <a href="https://tothemoon.one/" target="_blank">
-                <div class="">
-                    <img src="/pictures/tothemoon.png" alt="">
-                    <div class="title">
-                        tothemoon.com
-                    </div>
-                    <div class="description second-line">Crypto learning platform</div>
-                    <div class="role" style="color: white;"><span class="color-gold">Role:</span> full-stack developer</div>
-                    <div class="responsibilities" style="color: white;"><span class="color-gold">Responsibilities:</span>  Build the app from the ground, tranfer the design</div>
-                </div>
-            </a>
-             <a href="https://www.upwork.com/freelancers/~011789a0fdf2f50788" target="_blank">
-                <div class="">
-                    <img src="/pictures/upwork.jpg" alt="">
-                    <div class="title" style="font-size: 2rem;">
-                        And 10+ completed contracts on Upwork
-                    </div>
-                </div>
-            </a>
+    <div class="details">
+      <div id='projects'>
+        <h2>Projects</h2>
+        <div class="projects-container">
+          <div class="project-card">
+            <a href="https://wagandcompany.co.uk/"><h3>The Wag & Company</h3></a>
+            <p>CRM system for the visiting dog charity in UK</p>
+            <p>full-stack developer</p>
+          </div>
+          <div class="project-card">
+            <a href="https://bigagroparts.com/"><h3>Big Agro Parts</h3></a>
+            <p>E-Commerce of spare parts for agricultural machiner</p>
+            <p>full-stack developer</p>
+          </div>
+          <div class="project-card">
+            <a href="https://tothemoon.one/"><h3>ToTheMoon.one</h3></a>
+            <p>Crypto learning platform</p>
+            <p>full-stack developer</p>
+          </div>
+          <div class="project-card">
+            <a href="https://www.upwork.com/freelancers/~011789a0fdf2f50788"><h3>And 15+ successfully completed contracts on Upwork with ~3k hours</h3></a>
+            <p>API, full-stack, front-end/back-end development, bug fixes and refactoring etc</p>
+          </div>
         </div>
+      </div>
+      <div id="contacts">
+        <h2>Contacts</h2>
+        <ul class="contact-entries">
+          <li><a href="mailto:oleksandr.romaniuk.work@gmail.com" rel="noopener noreferrer">email: oleksandr.romaniuk.work@gmail.com</a></li>
+          <li><a href="https://github.com/olksndrdevhub" target="_blank" rel="noopener noreferrer">Github: @olksndrdevhub</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~011789a0fdf2f50788" rel="noopener noreferrer">Upwork: Oleksandr R.</a></li>
+          <li><a href="https://www.linkedin.com/in/oleksandr-romaniuk-613005143/" target="_blank" rel="noopener noreferrer">LinkedIn: Oleksandr Romaniuk</a></li>
+        </ul>
+      </div>
     </div>
-    
 
     <script src="script.js"></script>
 </body>
