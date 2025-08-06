@@ -1,44 +1,17 @@
-console.log('it`s working!')
+document.addEventListener('DOMContentLoaded', function() {
+  const projectLink = document.querySelector('.nav-link[href="#projects"]');
+  const contactsLink = document.querySelector('.nav-link[href="#contacts"]');
 
-let theme = localStorage.getItem('theme')
+  
+  // --- Click Event Listeners ---
+  projectLink.addEventListener('click', function(event) {
+    console.log('clicked');
+    event.preventDefault();
+    document.querySelector('#projects').scrollIntoView();
+  });
 
-if(theme == null){
-    setTheme('pop-os-dark')
-}else{
-    setTheme(theme)
-}
-
-let themeDots = document.getElementsByClassName('theme-dot')
-
-for(var i=0; themeDots.length > i; i++){
-    themeDots[i].addEventListener('click', function(){
-        let mode = this.dataset.mode
-        console.log('Option clicked: ', mode)
-        setTheme(mode)
-    })
-}
-
-
-function setTheme(mode) {
-    if(mode == 'pop-os-dark'){
-        document.getElementById('theme-style').href = 'pop-os-dark.css'
-    }
-
-    if(mode == 'pop-os-light'){
-        document.getElementById('theme-style').href = 'style.css'
-    }
-
-    if(mode == 'blue'){
-        document.getElementById('theme-style').href = 'blue.css'
-    }
-
-    if(mode == 'green'){
-        document.getElementById('theme-style').href = 'green.css'
-    }
-
-    if(mode == 'purple'){
-        document.getElementById('theme-style').href = 'purple.css'
-    }
-
-    localStorage.setItem('theme', mode)
-} 
+  contactsLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#contacts').scrollIntoView();
+  });
+});
